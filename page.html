@@ -1,29 +1,61 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Wiki Search Pro</title>
+
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- Bootstrap -->
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="page.css">
+
+
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="wiki-search-header text-center">
-            <img class="wiki-logo" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/wiki-logo-img.png" />
-            <br />
-            <input placeholder="Type a keyword and press Enter to search" type="search" class="search-input w-100" id="searchInput" />
-        </div>
-        <div class="d-none" id="spinner">
-            <div class="d-flex justify-content-center">
-                <div class="spinner-border" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-            </div>
-        </div>
-        <div class="search-results" id="searchResults"></div>
-    </div>
-</body>
 
+<div class="app-container">
+
+    <!-- HEADER -->
+    <div class="header text-center">
+        <h1 class="app-title">🔍 Wiki Search</h1>
+        <p class="subtitle">Search anything instantly with a premium experience</p>
+
+        <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input 
+                id="searchInput"
+                type="search"
+                placeholder="Search Wikipedia..."
+                class="search-input"
+            />
+        </div>
+    </div>
+
+    <!-- LOADER -->
+    <div id="spinner" class="spinner d-none">
+        <div class="loader"></div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="searchResults" class="results-container"></div>
+
+</div>
+
+<!-- JS -->
+<script src="page.js"></script>
+
+
+</body>
 </html>
